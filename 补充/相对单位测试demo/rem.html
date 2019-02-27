@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 10px;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>rem单位</title>
+</head>
+
+<body>
+    <!-- rem = root element -->
+    <div style="font-size:1rem;">div中的文本</div>
+    <div style="font-size:16px;">div中的文本</div>
+
+    <div style="font-size: 30px;">
+        第一层div中的文本30px
+        <section style="font-size: 2rem;">
+            第一层section中的文本 2rem * html元素的字体大小 = 20px
+            <div style="font-size: 1rem;">
+                第二层div中的文本 1rem * html元素的字体大小 = 10px
+                <section style="font-size: 0.5rem;">
+                    第二层section中的文本 0.5rem * html元素的字体大小 = 5px
+                </section>
+            </div>
+        </section>
+    </div>
+    <!-- 
+        rem=root element，是相对于根元素html的相对单位，如果html的字体大小为16px,则1rem=16px
+        和元素的父元素没有关系，相比较em，rem更容易计算。
+
+     -->
+</body>
+
+</html>

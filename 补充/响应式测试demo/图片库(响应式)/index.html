@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片库</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+        header {
+            height: 60px;
+            line-height: 60px;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        main {
+            margin: 5px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        img {
+            margin: 5px;
+            /* 100%指父元素main的宽度，40px指每个图片左右外边距之和 */
+            width: calc((100% - 40px) / 4);
+        }
+
+        /* 媒体设备，all,screen等和操作符可省略，直接写判断
+        设备宽度<=1150px
+        */
+        @media all and (max-width:1150px) {
+            img {
+                width: calc((100% - 30px) / 3);
+            }
+        }
+
+        @media (max-width:770px) {
+            img {
+                width: calc((100% - 20px) / 2);
+            }
+        }
+
+        @media (max-width:520px) {
+            img {
+                margin: 2.5px;
+                width: calc((100% - 5px));
+            }
+            main {
+                margin: 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>图片库</header>
+    <main>
+        <img src="images/1.jpg" alt="">
+        <img src="images/2.jpg" alt="">
+        <img src="images/3.jpg" alt="">
+        <img src="images/4.jpg" alt="">
+        <img src="images/5.jpg" alt="">
+        <img src="images/6.jpg" alt="">
+        <img src="images/7.jpg" alt="">
+        <img src="images/8.jpg" alt="">
+        <img src="images/9.jpg" alt="">
+        <img src="images/10.jpg" alt="">
+        <img src="images/11.jpg" alt="">
+        <img src="images/12.jpg" alt="">
+        <img src="images/13.jpg" alt="">
+        <img src="images/14.jpg" alt="">
+        <img src="images/15.jpg" alt="">
+        <img src="images/16.jpg" alt="">
+        <img src="images/17.jpg" alt="">
+        <img src="images/18.jpg" alt="">
+        <img src="images/19.jpg" alt="">
+        <img src="images/20.jpg" alt="">
+    </main>
+</body>
+</html>

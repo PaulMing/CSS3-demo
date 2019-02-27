@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 500px;
+            height: 50px;
+            border: 1px solid #bababa;
+            border-radius: 8px;
+            /* 父元素居中 */
+            margin: 100px auto;
+            /* 子元素水平垂直居中 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* 立体效果：背景渐变色以及盒子阴影 */
+            background: linear-gradient(to top,#f6f6f6,#eae8e8);
+            box-shadow: 0 10px 5px 0px #aaa, 0 3px 0 #bbb, 0 4px 0 #aaa;
+
+        }
+        .wrapper input:nth-child(1){
+            width: 75%;
+            height: 30px;
+            padding-left: 10px;
+            border-top-left-radius: 12px;           
+        }
+        .wrapper input:nth-child(1):focus{
+            box-shadow: 3px 3px 3px #bbb inset;
+            border-color: #aaa;
+            outline: 0;
+        }
+        .wrapper input:nth-child(2){
+            width: 18%;
+            height: 34px;
+            margin-left: 10px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 3px #aaa;    
+            background: linear-gradient(to top, #31b2c3, #0483a0);       
+        }
+    </style>
+</head>
+<body>
+    <!-- 巧妙利用盒子阴影和背景渐变色 -->
+    <div class="wrapper">
+        <input type="text" class="oinput">
+        <input type="submit">
+    </div>
+</body>
+</html>

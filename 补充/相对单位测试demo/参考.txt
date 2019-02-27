@@ -1,0 +1,35 @@
+﻿
+单位相关详细参考：
+http://www.css88.com/book/css/values/index.htm
+http://www.w3school.com.cn/cssref/css_units.asp
+http://www.runoob.com/cssref/css-units.html
+
+像素相关：
+https://baike.baidu.com/item/%E5%83%8F%E7%B4%A0/95084?fr=aladdin
+https://baike.baidu.com/item/%E5%88%86%E8%BE%A8%E7%8E%87/213523
+https://baike.baidu.com/item/%E5%9B%BE%E5%83%8F%E5%83%8F%E7%B4%A0/10689614
+https://baike.baidu.com/item/%E5%83%8F%E7%B4%A0%E5%9B%BE/773140?fr=aladdin
+https://wenku.baidu.com/view/56a1c4d433d4b14e8524682a.html
+
+CSS初始化
+各大网站的初始化代码：
+https://www.cnblogs.com/liumobai/p/5005623.html
+reset.css
+https://meyerweb.com/eric/tools/css/reset/
+normalize.css(推荐使用)
+https://necolas.github.io/normalize.css/
+
+
+2. CSS响应式：媒体查询
+@media screen and (max-width: 800px) {
+    .container{
+        border: 1px solid red;
+    }
+}
+
+bootstrap天生就支持响应式。
+详细参考：
+http://www.css88.com/book/css/properties/media-queries/index.htm
+
+各种设备值：
+http://www.w3school.com.cn/tags/att_link_media.asp

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* %是相对单位 -> 所以html,body都需设置 */
+        html,body{
+            height: 100%;
+        }
+        /* 宽度不设置默认为100%，高度随着子元素撑开 */
+        .wrapper{
+            display: flex;
+            height: 100%;
+
+        }
+        .left{
+            width: 100px;
+            height: 100%;
+            background: red;
+        }
+        .right{
+            width: 100px;
+            height: 100%;
+            background: yellow;
+        }
+        .middle{
+            /* 其他盒子不设置flex-grow;默认值为0[写成复合属性flex,其的默认值为1]，所以中间盒子设置flex-grow:1;其占据了剩下的空间 */
+            flex-grow: 1;
+            background: pink;
+        } 
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left">1</div>
+        <div class="middle">2</div>
+        <div class="right">3</div> 
+    </div>  
+</body>
+</html>

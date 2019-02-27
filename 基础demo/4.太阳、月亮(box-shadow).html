@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        :root{
+            background-color: #000;
+            height: 2000px;
+        }
+        .div{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            border: 1px solid #fff;
+            background-color: transparent;
+            box-shadow: inset 0px 0px 10px #fff,
+                        3px 0px 10px #f0f,
+                        0px 3px 10px #0ff,
+                        -3px 0px 10px #00f,
+                        0px 3px 10px #ff0;
+        }
+        .div1{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 300px;
+            border-radius: 50%;
+            box-shadow: inset 0px 0px 50px #fff,
+                        inset 10px 0px 80px #f0f,
+                        inset -10px 0px 80px #0ff,
+                        inset 10px 0px 300px #f0f,
+                        inset -10px 0px 300px #0ff,
+                        0px 0px 50px #fff,
+                        -10px 0px 80px #f0f,
+                        10px 0px 80px #0ff;
+        }
+        .div2{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 300px;
+            left: 100px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0px 0px 50px #fff;
+        }
+        .div3{
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: 600px;
+            left: 300px; 
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0px 0px 120px #fff,
+                        0px 0px 250px 125px #ff0;
+        }
+        .div4{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 1000px;
+            left: 200px;
+            background-color: #fff;
+            box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+            transition: all .6s;
+        }
+        .div4::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            box-shadow: 0px 5px 15px green;
+            opacity: 0;
+            transition: all .6s;
+        }
+        .div4:hover{
+            transform: scale(1.25,1.25);
+        }
+    </style>
+</head>
+<body>
+    <div class="div"></div>
+    <div class="div1"></div>
+    <!-- 月亮-->
+    <div class="div2"></div>
+    <!-- 太阳 -->
+    <div class="div3"></div>
+
+    <div class="div4"></div>
+</body>
+</html>

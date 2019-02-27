@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+html,body,.wrapper{
+    width: 100%;
+    height: 100%;
+}
+.wrapper{
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper .box{
+    width: 80%;
+    height: 80%;
+    /* border: 1px solid #ccc; */
+    display: flex;
+    justify-content: space-between;
+    /* 点击展开照片 -> 其它照片消失过程(往中间回收) */
+    align-items: center;
+}
+.wrapper .box .item{
+    width: 16%;
+    height: 100%;
+    background-color: #333;
+    /* border: 1px solid #eee; */
+    border-radius: 10px;
+    /* overflow: hidden; */
+    position: relative;
+}
+.wrapper .box .item .inner{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    position: absolute;
+    animation: move 1s linear 2s both;
+    cursor: pointer;
+
+}
+@keyframes move{
+    from{
+        top: 100%;
+    }
+    to{
+        top: 0px;
+    }
+}
+.wrapper .box .item:nth-child(1) .inner{
+    background-image: url('./img/1.jpg');
+    animation-delay: 0s;
+}
+.wrapper .box .item:nth-child(2) .inner{
+    background-image: url('./img/2.jpg');
+    animation-delay: 0.2s;
+}
+.wrapper .box .item:nth-child(3) .inner{
+    background-image: url('./img/3.jpg');
+    animation-delay: 0.4s; 
+}
+.wrapper .box .item:nth-child(4) .inner{
+    background-image: url('./img/4.jpg');
+    animation-delay: 0.6s; 
+}
+.wrapper .box .item:nth-child(5) .inner{
+    background-image: url('./img/5.jpg');
+    animation-delay: 0.8s; 
+}
+.wrapper .box .item:nth-child(6) .inner{
+    background-image: url('./img/6.jpg');
+    animation-delay: 1s;
+}
+
+
+.wrapper .box .item .inner .bg{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    transition: opacity 1s;
+}
+.wrapper .box .item .inner .title{
+    /* width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    /* 有bug, 文字如何垂直居中 
+    line-height: 100%; */
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 24px;
+    color: #ccc;
+    transition: font-size 1s;
+}
+
+/* 遮罩层消失 */
+.wrapper .box .item .inner:hover .bg{
+    opacity: 0;
+}
+.wrapper .box .item .inner:hover .title{
+    font-size: 20px;
+    opacity: 1;
+    transition: opacity 1s;
+}
+.wrapper .box .item{
+    transition: width 1s, height 1s 1s;
+}
+
+/* 点击图片展开 */
+.wrapper-active .box .item{
+    transition: height 1s linear, width 1s linear 1s;
+}
+.wrapper-active .box .item.active{
+    width: 100%;
+    height: 100%;
+}
+.wrapper-active .box .item:not(.active){
+    width: 0px;
+    height: 0px;
+
+}
+.wrapper-active .box .item .title{
+    display: none;
+}
+.wrapper .box .item .head{
+    opacity: 0;
+}
+.wrapper-active .box .item.active .head{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    font-size: 24px;
+    color: #fff;
+    opacity: 1;
+    transition: opacity 2s;
+}
+.wrapper-active .box .item.active .head .btn{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    transform-origin: left center;
+    animation: btnRotate 2s 2s;
+}
+@keyframes btnRotate{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+/* 利用伪元素制作“叉号” -> 制作“叉号”的方法：1."加号"旋转；2.&times; 3.块元素拼凑*/
+.wrapper-active .box .item.active .head .btn:after{
+    content: '';
+    /* display: inline-block; */
+    width: 5px;
+    height: 30px;
+    transform: rotate(45deg);
+    background-color: #fff;
+    position: absolute;
+}
+.wrapper-active .box .item.active .head .btn:before{
+    content: '';
+    /* display: inline-block; */
+    width: 5px;
+    height: 30px;
+    transform: rotate(-45deg);
+    background-color: #fff;
+    position: absolute;
+}

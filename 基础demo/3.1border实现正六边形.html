@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            height: 100px;
+            width: 173.2px;
+            /* border: 1px solid black; */
+            margin: 100px auto;
+            position: relative;
+            background-color: pink;
+        }
+        .box::before{
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-bottom: 50px solid red;
+            border-left: 86.6px solid transparent;
+            border-right: 86.6px solid transparent;
+            position: absolute;
+            left: 0;
+            top: -50px;
+        }
+        .box::after{
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            /* border-left-width表示所在三角形高度,其它亦是如此 */
+            border-left: 86.6px solid transparent;
+            border-right: 86.6px solid transparent;
+            border-top: 50px solid red;
+            position: absolute;
+            left: 0;
+            /* 可动态调节测试 */
+            bottom: -50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

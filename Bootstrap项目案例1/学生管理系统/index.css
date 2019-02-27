@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+/* 左边菜单栏 */
+.wrapper .left-menu{
+    width: 200px;
+    height: 100%;
+    background: rgb(77, 94, 112);
+    position: absolute;
+    left: 0;
+}
+/* logo部分 */
+.wrapper .left-menu .logo{
+    padding: 20px;
+    background-color: rgb(53,68,87);
+}
+.wrapper .left-menu .logo img{
+    width: 30px;
+    height: 30px;
+}
+.wrapper .left-menu .logo span{
+    margin-left: 3px;
+    color: #fff;
+    font-size: 14px;
+}
+/* info部分 */
+.wrapper .left-menu .info{
+    padding: 10px 20px;
+    border-bottom: 1px slid red;
+}
+.wrapper .left-menu .info p{
+    font-size: 14px;
+    color: rgb(179, 188, 197);
+}
+.wrapper .left-menu .info p a{
+    color: rgb(0, 255, 255);
+}
+/* 账户管理，学生管理 */
+.wrapper .left-menu .list .list-group{
+    border-top: 1px solid #ccc;
+}
+.wrapper .left-menu .list .list-group a{
+    font-size: 14px;
+    color: rgb(179, 188, 197);
+    background: rgb(77, 94, 112);
+    border: none; 
+}
+.wrapper .left-menu .list .list-group a[class~='disabled']{
+    margin-left: -7px;
+    font-weight: 700;
+}
+.wrapper .left-menu .list .list-group a:not([class~='disabled']){
+    padding-left: 30px;
+}
+/* 点击导航条 -> 背景颜色和字体颜色改变 */
+.wrapper .left-menu .list-group .list-group-item.active{
+    background: #ddd;
+    color: #333;
+}
+
+
+
+/* 右边内容区 */
+.wrapper .right-content{
+    height: 100%;
+    padding-left: 200px;
+    background-color: #ddd;
+}
+/* 右边头部 */
+.wrapper .right-content .header{
+    height: 70px;
+    padding: 10px 10px 0px 10px;   
+    font-size: 20px;
+    background-color: #fff;     
+}
+.wrapper .right-content .header span{
+    display: none;
+}
+/* 右边切换区 */
+.wrapper .right-content .tab-content-item{
+    display: none;
+}
+.wrapper .right-content .tab-content-item.active{
+    display: block;
+}
+/* 学生信息 */
+.wrapper .right-content .student-list .table-header{ 
+    height: 35px;
+    line-height: 35px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #646987;
+    background-color: #e3e8ee;
+    padding-left: 30px;
+}
+.wrapper .right-content .student-list .table-body .row{
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.856);
+    background-color: #fff;
+}
+.slide-btn{
+    cursor: pointer;
+}
+.wrapper .right-content .student-list .table-body #row1{
+    margin-top: 10px;
+    margin-left: 20px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.856);
+    background-color: #fff;
+}
+.wrapper .right-content .student-list .table-body #row1 .row{
+    margin-left: 0px;
+}
+
+@media screen and (max-width: 1000px){
+    .tab-content-item {
+        min-width: 973px;
+    }
+    .left-menu{
+        display: none;
+    }
+    #show-menu{
+        display: block;
+    }
+    .wrapper .right-content{
+        padding-left: 0px;
+    }
+    
+    
+}
+.left-menu.show{
+    display: block;
+}
+.left-menu + .right-content.add-pd{
+    padding-left: 200px;
+}
+
+
+
+
+
+
+

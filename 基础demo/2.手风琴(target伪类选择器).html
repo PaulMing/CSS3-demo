@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        .wrapper{
+            width: 300px;
+            margin: 100px auto;
+            padding: 5px;
+            border: 1px solid grey;
+            background: #eee;
+            border-radius: 5px;
+        }
+        .second,.third{
+            margin-top: 10px;
+        }
+        h4{
+            width: 300px;
+            height: 35px;
+            line-height: 35px;
+            background: grey;
+        }
+        h4 a{
+            padding: 10px;
+        }
+        .demo{
+            display: none;
+            /* font-size: 12px; */
+            color: palevioletred;
+        }
+        .demo:target{
+            display: block;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="first">
+            <h4><a href="#demo1">HTML5</a></h4>
+            <div id="demo1" class="demo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, tempore consequatur beatae aliquam possimus voluptatibus eaque delectus culpa animi rem dolorem deserunt, amet laborum voluptate eius obcaecati a sequi. Autem.</div>
+        </div>
+        <div class="second">
+            <h4><a href="#demo2">CSS3</a></h4>
+            <div id="demo2" class="demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium minus qui accusamus atque eligendi labore a nam corporis ipsum eveniet iusto consectetur ea error accusantium modi, doloribus expedita minima quaerat?</div>
+        </div>
+        <div class="third">
+            <h4><a href="#demo3">javaScript</a></h4>
+            <div id="demo3" class="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem doloribus vero autem deserunt, soluta tempore minima consequatur enim dolorem ad quaerat itaque non porro expedita culpa, vitae odit excepturi eaque?</div>
+        </div>
+    </div>
+</body>
+</html>

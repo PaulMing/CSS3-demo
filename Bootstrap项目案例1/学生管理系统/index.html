@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 左边菜单栏 -->
+        <div class="left-menu">
+            <div class="logo">
+                <img src="./images/logo.png" alt="xx教育">
+                <span>xx教育</span>
+            </div>
+            <div class="info">
+                <p>xxx</p>
+                <p>1969094024@qq.com</p>
+                <p>
+                    <a href="#">退出登录</a>
+                </p>
+            </div>
+            <div class="list">
+                <div class="list-group">
+                    <a href="#" class="list-group-item disabled">
+                        账号管理
+                    </a>
+                    <a href="#" class="list-group-item">用户信息</a>
+                    <a href="#" class="list-group-item">账号密码</a>
+                    <a href="#" class="list-group-item disabled">
+                        学生管理
+                    </a>
+                    <a href="#student-form" class="list-group-item">添加学生</a>
+                    <a href="#student-list" class="list-group-item active">学生信息</a>
+                </div>
+            </div>
+        </div>
+        <!-- 右边内容区 -->
+        <div class="right-content">
+            <div class="header"><span id="show-menu" class="glyphicon glyphicon-list"></span></div>
+            <div class="student-form tab-content-item " id="student-form">
+                <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">学号</label>
+                            <div class="col-sm-6">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="学号">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label">姓名</label>
+                            <div class="col-sm-6">
+                            <input type="text" class="form-control" id="inputPassword3" placeholder="姓名">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label">性别</label>
+                            <div class="col-sm-6">
+                                <div class="radio col-sm-4">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                        男
+                                    </label>
+                                </div>
+                                <div class="radio col-sm-4">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                        女
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label">邮箱</label>
+                            <div class="col-sm-6">
+                            <input type="email" class="form-control" id="inputPassword3" placeholder="邮箱">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label">出生年</label>
+                            <div class="col-sm-6">
+                            <input type="data" class="form-control" id="inputPassword3" value="年/月/日">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label">手机号</label>
+                            <div class="col-sm-6">
+                            <input type="text" class="form-control" id="inputPassword3" placeholder="手机号">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label">地址</label>
+                            <div class="col-sm-6">
+                            <input type="text" class="form-control" id="inputPassword3" placeholder="地址">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-6">
+                            <button type="submit" class="btn btn-default">提交</button>
+                            </div>
+                        </div>
+                </form>
+            </div>
+            <div class="student-list tab-content-item active" id="student-list">
+                <div class="table-header row">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                        学号
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">姓名</div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">手机号</div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">操作</div>
+                </div>
+                <div class="table-body">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                1
+                        </div>
+                        <!-- data-toggle="collapse"//表示其是折叠面板   data-target="#row1"//表示打开的是哪个元素 -->
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 btn-streach slide-btn"  data-toggle="collapse" data-target="#row1">
+                            <span class="glyphicon glyphicon-triangle-bottom"></span>
+                            小明
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">133333333333</div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <!-- 点击展示模态框 data-toggle="modal" data-target="#studentModal"//同折叠面板类似-->
+                            <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#studentModal">修改</button>
+                            <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteStudent">删除</button>
+                        </div>
+                    </div>
+                    <!-- 折叠面板 -> 展示内容 -->
+                    <!-- in类名表示样式，collapse类名表示其是折叠面板  -->
+                    <div id="row1" class="collapse in" >
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">性别: 男</div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">年龄: 18</div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">邮箱: 1111111@qq.com</div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">住址: 北京市海淀区</div>
+                        </div>
+                    </div>
+                    <!-- 展示模态框 -->
+                    <div class="modal fade" id="studentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <!-- 模态框的头部标题部分 -->
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h4 class="modal-title" id="myModalLabel">修改信息</h4>
+                                    </div>
+                                    <!-- 模态框的内容区 -->
+                                    <div class="modal-body">
+                                            <form class="form-horizontal">
+                                                <div class="form-group">
+                                                    <label for="number" class="col-sm-2 control-label">学号</label>
+                                                    <div class="col-sm-6">
+                                                    <input type="text" class="form-control" id="number" placeholder="学号">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="name" class="col-sm-2 control-label">姓名</label>
+                                                    <div class="col-sm-6">
+                                                    <input type="text" class="form-control" id="name" placeholder="姓名">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="sex" class="col-sm-2 control-label">性别</label>
+                                                    <div class="col-sm-6">
+                                                        <div class="radio col-sm-4">
+                                                            <label>
+                                                                <input type="radio" name="sex" id="male" value="option1" checked>
+                                                                男
+                                                            </label>
+                                                        </div>
+                                                        <div class="radio col-sm-4">
+                                                            <label>
+                                                                <input type="radio" name="sex" id="female" value="option2">
+                                                                女
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email" class="col-sm-2 control-label">邮箱</label>
+                                                    <div class="col-sm-6">
+                                                        <input type="email" class="form-control" id="email" placeholder="邮箱">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="burn" class="col-sm-2 control-label">出生年</label>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" class="form-control" id="burn" placeholder="出生年">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="phone" class="col-sm-2 control-label">手机号</label>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" class="form-control" id="phone" placeholder="手机号">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="addr" class="col-sm-2 control-label">住址</label>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" class="form-control" id="addr" placeholder="住址">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-sm-offset-2 col-sm-6">
+                                                        <button type="submit" class="btn btn-default">提交</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                    </div>
+                                    <!-- 模态框的底部按钮部分 -->
+
+                                    <div class="modal-footer">
+                                        <!-- data-dismiss="modal" 代表关闭当前模态框 -->
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                        <button type="button" class="btn btn-primary">提交更改</button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="../jQuery3.3.1.js"></script>
+    <script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

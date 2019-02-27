@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            position: absolute;
+        }
+        .div{
+            left: 300px;
+            top: 10px;
+            border-radius: 50%;
+        }
+        .div1{
+            /* calc();*/
+            /* 实现居中 */
+            left: calc(50% - 50px);
+            top: calc(50% - 50px);
+            border-top-left-radius: 100px;
+        }
+        .div2{
+            left: 550px;
+            width: 200px;
+            height: 100px;
+            border-top-left-radius: 100px;
+            border-top-right-radius: 100px;
+        }
+        .div3{
+            left: 770px;
+            width: 200px;
+            height: 100px;
+            border-top-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 圆 -->
+    <div class="div"></div>
+    <!-- 1/4圆 -->
+    <div class="div1"></div>
+    <!-- 半圆 -->
+    <div class="div2"></div>
+    <!-- 风扇 -->
+    <div class="div3"></div>
+</body>
+</html>

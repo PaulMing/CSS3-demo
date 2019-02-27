@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 600px;
+            height: 600px;
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-style: preserve-3d;
+            
+            /* 第一种方案 -> 父元素旋转角度制造视角 */
+            transform: rotateX(40deg);
+            /* 第二种方案 -> 景深制造视角 */
+            /* perspective: 600px; */
+            /* perspective-origin: top; */
+
+            /* 旋转动画*/
+            animation: move 4s linear infinite;
+        }
+        .demo{
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            font-size: 24px;
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+            position:absolute;
+        }
+        .demo:nth-child(1){
+            background: rgba(231, 81, 81, 0.5);
+            transform: rotateY(60deg) translateZ(100px);
+        }
+        .demo:nth-child(2){
+            background: rgba(155, 238, 72, 0.5);
+            transform: rotateY(120deg) translateZ(100px);
+        } 
+        .demo:nth-child(3){
+            background: rgba(63, 82, 206, 0.5);
+            transform: rotateY(180deg) translateZ(100px);
+        }
+        .demo:nth-child(4){
+            background: rgba(20, 81, 81, 0.5);
+            transform: rotateY(240deg) translateZ(100px);
+        }
+        .demo:nth-child(5){
+            background: rgba(71, 212, 212, 0.5);
+            transform: rotateY(300deg) translateZ(100px);
+        }
+        .demo:nth-child(6){
+            background: rgba(180, 51, 180, 0.575);
+            transform: rotateY(0deg) translateZ(100px);
+        }
+        @keyframes move{
+            0%{
+                transform: rotateX(40deg) rotateY(0deg);
+            }
+            100%{
+                transform: rotateX(40deg) rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="demo">1</div>
+        <div class="demo">2</div>
+        <div class="demo">3</div>
+        <div class="demo">4</div>
+        <div class="demo">5</div>
+        <div class="demo">6</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapp{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        div:target{
+            background: yellow;
+        }      
+    </style>
+</head>
+<body>
+    <!-- 测试:target{};伪类选择器 -->
+    <a href="#demo1">demo1</a>
+    <a href="#demo2">demo2</a>
+    <a href="#demo3">demo3</a>
+    <div id="demo1" class="wrapp">1</div><br><br><br><br><br><br>
+    <div id="demo2" class="wrapp">2</div><br><br><br><br><br><br>
+    <div id="demo3" class="wrapp">3</div>
+</body>
+</html>

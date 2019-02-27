@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .demo{
+            width: 600px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            position: relative;
+           
+        }
+        .box{
+            width: 200px;
+            height: 100px;
+            border: 1px solid pink;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translatex(-50%) translatey(-50%);
+            /* 可行 transform: translate(-50%,-50%); */
+            /*  以下方式不可行 -> 其会覆盖的
+                transform: translatey(-50%);
+                transform: translatey(-50%);   
+            */
+        }   
+    </style>
+</head>
+<body>
+    <div class="demo">
+        <div class="box">可以居中吗</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #000;
+        }
+        div{
+          width: 700px;
+          height: 100px;
+          font-size: 80px;
+          color: #ddd;
+          position: absolute;
+          left: 200px;
+          top: 100px;
+          text-shadow: 0px 0px 10px #0f0,
+                       0px 0px 20px #0f0,
+                       0px 0px 30px #0f0;
+          transition: all 2s;
+        }
+        div:hover{
+            text-shadow: 0px 0px 10px #f00,
+                         0px 0px 20px #f10,
+                         0px 0px 30px #f20;
+        }
+        div::before{
+            content: "NO";
+            opacity: 0;
+            text-shadow: 0px 0px 10px #f00,
+                         0px 0px 20px #f10,
+                         0px 0px 30px #f20,
+                         0px -5px 10px #f00,
+                         0px -10px 20px #f10,
+                         0px -15px 30px #f20,
+                         0px -20px 40px #f30;
+            transition: all 3s;
+        }
+        div:hover::before{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div>ACCESS</div>  
+</body>
+</html>

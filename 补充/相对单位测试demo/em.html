@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="utf-8" />
+    <title>em单位</title>
+</head>
+
+<body style="font-size: 16px;">
+    <!-- font-size属性有继承性，所以默认情况下div会继承body的字体大小 -->
+    <div>看看字体大小</div>
+    <!-- 由于div的父元素body的字体是16px，所以div的字体=1em*16px -->
+    <div style="font-size: 1em;">看看字体大小</div>
+    <section style="font-size: 14px">
+        <!-- 由于div的父元素section的字体是14px，所以div的字体=1em*14px -->
+        <div style="font-size: 1em;">看看字体大小</div>
+        <!-- span的字体大小：0.5em*14px=7px -->
+        <span style="font-size:0.5em;">span中的文本</span>
+    </section>
+    <div style="font-size:7px;">span中的文本</div>
+
+
+    <section style="font-size: 30px;">
+        section中的文本
+        <div style="font-size: 1.5em;">
+            div中的文本
+            <h1 style="font-size: 2em; font-weight: normal;">
+                h1中的文本
+                <!-- font-size: 0.5 * 2 * 1.5 * 30 = 45px-->
+                <span style="font-size: 0.5em;">span中的文本</span>
+            </h1>
+        </div>
+    </section>
+    <div style="font-size: 45px;">span中的文本</div>
+
+    <!-- 总结：
+    em:element元素，表示相对于父元素的单位。是相对单位。
+    如果多个em嵌套使用，注意计算。嵌套的层数越多，计算越复杂。
+    -->
+</body>
+
+</html>

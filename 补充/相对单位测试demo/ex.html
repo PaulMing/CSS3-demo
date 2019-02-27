@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="utf-8" />
+    <title>ex</title>
+</head>
+
+<body>
+    <!-- 由于浏览器默认字体是16px，所以div的高度：1ex = 16px / 2 = 8px -->
+    <div style="height: 1ex; background: red;"></div>
+    <div style="height: 8px; background: blue;"></div>
+
+    <div style="font-size: 32px">
+        32px字体大小
+        <span style="font-size: 1ex;">
+            16px的字体大小
+            <i style="font-size: 0.5ex;">8px的字体大小</i>
+        </span>
+    </div>
+
+    <!-- 总结：
+    ex：父元素字体的一半，是相对单位，不常用。
+    -->
+</body>
+
+</html>
